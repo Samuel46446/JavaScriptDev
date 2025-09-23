@@ -1,5 +1,5 @@
-enum Service { DSI="DSI", RH="RH", COMPTA="COMPTA" }
-enum Sector { EAST="EAST", WEST="WEST", NORTH="NORTH", SOUTH="SOUTH", PARIS="PARIS" }
+export enum Service { DSI="DSI", RH="RH", COMPTA="COMPTA" }
+export enum Sector { EAST="EAST", WEST="WEST", NORTH="NORTH", SOUTH="SOUTH", PARIS="PARIS" }
 
 type Employee = {
   id: string;

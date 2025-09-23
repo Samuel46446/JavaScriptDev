@@ -1,16 +1,20 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Sector = exports.Service = void 0;
 var Service;
 (function (Service) {
     Service["DSI"] = "DSI";
     Service["RH"] = "RH";
     Service["COMPTA"] = "COMPTA";
-})(Service || (Service = {}));
+})(Service || (exports.Service = Service = {}));
 var Sector;
 (function (Sector) {
     Sector["EAST"] = "EAST";
     Sector["WEST"] = "WEST";
     Sector["NORTH"] = "NORTH";
     Sector["SOUTH"] = "SOUTH";
-})(Sector || (Sector = {}));
+    Sector["PARIS"] = "PARIS";
+})(Sector || (exports.Sector = Sector = {}));
 var employeeA = {
     id: "E001",
     name: "Alice",
