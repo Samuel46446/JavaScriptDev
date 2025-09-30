@@ -1,4 +1,4 @@
-import { Sector } from "./TypageTest";
+import { Sector } from "./TypageTest.ts";
 
 interface Personne {
     id: string;
@@ -11,6 +11,16 @@ interface Visiteur extends Personne {
     vehiculePersonnel?: boolean;
 }
 
+abstract class Value<ClassType> {
+    public constructor() {}
+    value!: ClassType;
+    public get(): ClassType
+    {
+        return this.value;
+    }
+};
+
+
 const visiteurA: Visiteur = {
     id: "1",
     nom: "Dupont",
@@ -19,4 +29,10 @@ const visiteurA: Visiteur = {
     vehiculePersonnel: true
 };
 
+const vVal: Value<Visiteur> = {
+    value: visiteurA,
+    get(): Visiteur { return super.get(); }
+};
+
 console.log(visiteurA);
+console.log(vVal.get());
