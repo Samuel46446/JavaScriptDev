@@ -1,0 +1,11 @@
+<p>counterlist works!</p>
+<!-- counter-list.component.html -->
+<h2>Compteur : {{ count() }}</h2>
+<button (click)="increment()">+1</button>
+
+<h3>Liste</h3>
+@for (item of items(); track item.id) {
+<p>{{ item.name }}</p>
+} @if (count() > 5) {
+<p>Bravo, vous avez cliqué plus de 5 fois !</p>
+}
