@@ -5,7 +5,7 @@ import { Counterlist } from './counterlist/counterlist';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CounterComponent, Counterlist],
+  imports: [RouterOutlet, CounterComponent, Counterlist, ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -1,0 +1,15 @@
+<p>medecins-list.component works!</p>
+<h1>Médecins ({{ medecins.length }})</h1>
+<div>
+  @for (doctor of doctors; track medecin.id) {
+	  <div>
+	    <a [routerLink]="['/medecins', medecin.id]">
+          <h2>{{ doctor.firstName }} {{ doctor.lastName }}</h2>
+	      <div>{{ medecin.adresse }}</div>
+	      <span>[{{ medecin.specialite }}]</span>
+	    </a>
+	  </div>
+  } @empty {
+	  <p>Aucun médecin à afficher.</p>
+  }
+</div>
