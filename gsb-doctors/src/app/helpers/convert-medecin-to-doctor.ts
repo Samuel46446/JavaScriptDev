@@ -1,4 +1,4 @@
-import { Medecin } from '../types/medecin.interface';
+import { Medecin } from '../types/medecin.interface/medecin.interface';
 import { Doctor } from '../types/doctor.interface';
 
 // Fonction classique (pas fléchée) 
