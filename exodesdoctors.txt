@@ -1,0 +1,19 @@
+1) Initialiser le projet git
+2) Créer le projet sur github
+
+IT3)
+1) Un interface décrit la forme d’un objet, les types sont plus limité.
+
+IT5)
+1) Une fonction fléché est utile si il n'y a qu'un retour simple, tandis que la classique peut en avoir plusieurs.
+
+IT6)
+1) Car nous faisons des gros changement sur l'API.
+
+IT7)
+1) Le but c'est d'injecter tout dans le client https uniquement, cela sécurise les requêtes.
+2) Observable
+3) Il ajoute à la map les doctors qui était anciennement des medecins et qui ont été convertit.
+
+IT8)
+1) Elle permet de convertirs les doctors en signal.
