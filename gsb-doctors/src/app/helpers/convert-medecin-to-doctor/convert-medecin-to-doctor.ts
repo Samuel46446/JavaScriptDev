@@ -1,5 +1,5 @@
-import { Medecin } from '../types/medecin.interface/medecin.interface';
-import { Doctor } from '../types/doctor.interface';
+import { Medecin } from '../../types/medecin.interface/medecin.interface';
+import { Doctor } from '../../types/doctor.interface/doctor.interface';
 
 // Fonction classique (pas fléchée) 
 export function convertMedecinToDoctor(medecin: Medecin): Doctor {
