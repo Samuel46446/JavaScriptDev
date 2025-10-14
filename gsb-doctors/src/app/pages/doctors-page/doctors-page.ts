@@ -1,18 +1,20 @@
-import { Injectable, inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
-import { Medecin } from '../../types/medecin.interface/medecin.interface';
+import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { DoctorsService } from '../../services/doctors.service';
 import { Doctor } from '../../types/doctor.interface/doctor.interface';
-import { convertMedecinToDoctor } from '../../helpers/convert-medecin-to-doctor/convert-medecin-to-doctor';
 
-@Injectable({ providedIn: 'root' })
-export class DoctorsService {
-  private httpClient = inject(HttpClient);  
+@Component({
+  selector: 'app-doctors-page',  
+  standalone: true,  
+  imports: [CommonModule],  
+  templateUrl: './doctors-page.html',  
+  styleUrls: ['./doctors-page.css']
+})
+export class DoctorsPageComponent {
+  private doctorsService = inject(DoctorsService);  
   
-  getDoctors(): Observable<Doctor[]> {
-    return this.httpClient.get<Medecin[]>('assets/doctors.json')
-      .pipe(
-		      map((medecins) => medecins.map(convertMedecinToDoctor))
-      );  
-  }
+  doctors = toSignal(this.doctorsService.getDoctors(), {
+    initialValue: [] as Doctor[]
+  });
 }
