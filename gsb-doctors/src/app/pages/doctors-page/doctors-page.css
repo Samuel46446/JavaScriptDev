@@ -92,6 +92,13 @@
   margin: 0;
 }
 
+.hthree {
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    font-style: oblique;
+    text-decoration: underline;
+}
+
 @media (prefers-color-scheme: dark) {
   .doctor-card {
     background: hsl(0, 0%, 100%);
