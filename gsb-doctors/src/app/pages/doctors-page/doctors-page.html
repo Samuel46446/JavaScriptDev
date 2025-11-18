@@ -1,1 +1,20 @@
-<p>doctors-page works!</p>
+<section class="doctors-grid">
+  @for (doctor of doctors(); track doctor.id) {
+    <article class="doctor-card">
+      <header class="doctor-card__header">
+        <h3 class="doctor-card__name">
+          {{ doctor.firstName }} {{ doctor.lastName }}
+        </h3>
+        <span class="doctor-card__specialty-tag">
+          {{ doctor.specialty }}
+        </span>
+      </header>
+      <div class="doctor-card__body">
+        <p class="doctor-card__email">
+          <a [href]="'mailto:' + doctor.email">{{ doctor.email }}</a>
+        </p>
+        <p class="doctor-card__address">{{ doctor.address }}</p>
+      </div>
+    </article>
+  }
+</section>
